@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="AM_DB7" class="com.test.model.Auto">
+		<property name="engine" >
+			<bean id="v8" class="com.test.model.Engine">
+				<constructor-arg value="v8"></constructor-arg>
+			</bean>
+		</property>
+		<property name="transmission" ref="Automatic"></property>
+	</bean>
+	<bean id="Automatic" class="com.test.model.Transmission">
+		<constructor-arg value="Automatic"></constructor-arg>
+	</bean>
+</beans>
