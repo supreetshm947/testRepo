@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="square" class="com.model.Square">
+		<property name="A" >
+			<bean class="com.model.Point">
+				<property name="x" value="${pointA.x}"></property>
+				<property name="y" value="${pointA.y}"></property>
+			</bean>
+		</property>
+		<property name="B" >
+			<bean class="com.model.Point">
+				<property name="x" value="${pointB.x}"></property>
+				<property name="y" value="${pointB.y}"></property>
+			</bean>
+		</property>
+		<property name="C" >
+			<bean class="com.model.Point">
+				<property name="x" value="${pointC.x}"></property>
+				<property name="y" value="${pointC.y}"></property>
+			</bean>
+		</property>
+		<property name="D" >
+			<bean class="com.model.Point">
+				<property name="x" value="${pointD.x}"></property>
+				<property name="y" value="${pointD.y}"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean class="com.test.PostProcessorDemo"></bean>
+</beans>

@@ -11,7 +11,7 @@
 		</property>
 		<property name="transmission" ref="Automatic"></property>
 	</bean>
-	<bean id="Automatic" class="com.test.model.Transmission">
+	<bean id="Automatic" class="com.test.model.Transmission" init-method="init" destroy-method="destroy" >
 		<constructor-arg value="Automatic"></constructor-arg>
 	</bean>
 </beans>

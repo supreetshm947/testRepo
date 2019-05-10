@@ -1,8 +1,11 @@
 package com.test.model;
 
+import org.springframework.beans.factory.annotation.Required;
+
 public class Engine {
 	private String engineName;
 
+	@Required
 	public String getEngineName() {
 		return engineName;
 	}

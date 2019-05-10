@@ -22,4 +22,12 @@ public class Transmission {
 		return "Transmission [transType=" + transType + "]";
 	}
 	
+	public void init() {
+		System.out.println("Transmission init");
+	}
+	
+	public void destroy() {
+		System.out.println("Transmission destroy");
+	}
+	
 }

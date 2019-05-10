@@ -13,7 +13,7 @@ public class Config {
 
 	@Bean
 	public Engine engine() {
-		return new Engine("v8");
+		return new Engine();
 	}
 	
 	@Bean
