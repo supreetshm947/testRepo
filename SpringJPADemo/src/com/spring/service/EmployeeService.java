@@ -25,4 +25,9 @@ public class EmployeeService {
 	public List<Employee> getAllEmployees() {
 		return StreamSupport.stream(employeeRepository.findAll().spliterator(), false).collect(Collectors.toList());
 	}
+	
+	@Transactional
+	public void deleteEmployee(String empId) {
+		employeeRepository.delete(empId);
+	}
 }
